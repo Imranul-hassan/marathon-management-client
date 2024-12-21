@@ -60,12 +60,12 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               <div className="flex gap-2">
                 <div>
                   <NavLink to="/login">
-                    <a className="py-2 px-3 bg-[#112548] rounded-md font-semibold">Login</a>
+                    <a className="py-2 px-3 bg-[#112548] text-white rounded-md font-semibold">Login</a>
                   </NavLink>
                 </div>
                 <div className="md:block hidden">
                   <NavLink to="/register">
-                    <a className="py-2 px-3 bg-[#112548] rounded-md font-semibold">Register</a>
+                    <a className="py-2 px-3 bg-[#112548] text-white rounded-md font-semibold">Register</a>
                   </NavLink>
                 </div>
               </div>
