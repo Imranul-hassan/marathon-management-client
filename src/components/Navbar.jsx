@@ -1,6 +1,6 @@
 
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
@@ -27,18 +27,46 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-[#1D3557] rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <NavLink to="/">Marathons</NavLink>
-            <NavLink to="/all-campaign">Dashboard</NavLink>
+            className="menu menu-sm dropdown-content z-50 bg-white rounded-box mt-3 w-52 p-2 shadow">
+            <li> <Link to="/">Marathons</Link></li>
+            <li>
+              <Link to='/add-marathon'>Add Marathon</Link>
+            </li>
+            <li>
+              <Link to='/my-marathon'>My Marathon List</Link>
+            </li>
+            <li>
+              <Link to='/my-apply'>My Apply List</Link>
+            </li>
           </ul>
         </div>
         <NavLink to="/" className="btn btn-ghost text-xl pl-0">MARATHON</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
+        <div className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
           <NavLink to="/">Marathons</NavLink>
-          <NavLink to="/all-campaign">Dashboard</NavLink>
-        </ul>
+          <div className='dropdown dropdown-end z-50'>
+            <button className="">Dashboard</button>
+
+            <ul tabIndex={0}
+              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+            >
+              <li>
+                <Link to='/add-marathon' className='justify-between'>
+                  Add Marathon
+                </Link>
+              </li>
+              <li>
+                <Link to='/my-marathon'>My Marathon List</Link>
+              </li>
+              <li>
+                <Link to='/my-apply'>My Apply List</Link>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="navbar-end">
         {
