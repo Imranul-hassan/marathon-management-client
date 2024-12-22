@@ -70,7 +70,7 @@ const MarathonDetails = () => {
           })
             .then(() => {
               toast.success('Registration Successfully')
-              navigate('/my-apply');
+              navigate(`/my-apply/:${user?.email}`);
             });
         }
       })

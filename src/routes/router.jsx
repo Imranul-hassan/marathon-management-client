@@ -44,7 +44,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-marathon',
-        element: <AddMarathon></AddMarathon>
+        element: <PrivateRoute>
+          <AddMarathon></AddMarathon>
+        </PrivateRoute>
       },
       {
         path: '/my-marathon/:email',
@@ -54,8 +56,11 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}`)
       },
       {
-        path: '/my-apply',
-        element: <MyApply></MyApply>
+        path: '/my-apply/:email',
+        element: <PrivateRoute>
+         <MyApply></MyApply>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/my-apply/${params.email}`)
       }
     ]
   },
