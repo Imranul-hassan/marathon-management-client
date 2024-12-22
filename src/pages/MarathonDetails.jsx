@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import toast from 'react-hot-toast'
 
 const MarathonDetails = () => {
   const { user } = useContext(AuthContext)
@@ -68,7 +69,7 @@ const MarathonDetails = () => {
             body: JSON.stringify({ incrementCount: 1 }),
           })
             .then(() => {
-              alert('Registration successful!');
+              toast.success('Registration Successfully')
               navigate('/my-apply');
             });
         }

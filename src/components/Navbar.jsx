@@ -57,7 +57,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
                 </Link>
               </li>
               <li>
-                <Link to='/my-marathon'>My Marathon List</Link>
+                <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
               </li>
               <li>
                 <Link to='/my-apply'>My Apply List</Link>
