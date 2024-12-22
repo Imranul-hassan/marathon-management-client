@@ -28,7 +28,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content z-50 bg-white rounded-box mt-3 w-52 p-2 shadow">
-            <li> <Link to="/">Marathons</Link></li>
+            <li> <Link to="/all-marathon">Marathons</Link></li>
             <li>
               <Link to='/add-marathon'>Add Marathon</Link>
             </li>
@@ -44,7 +44,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
-          <NavLink to="/">Marathons</NavLink>
+          <NavLink to="/all-marathon">Marathons</NavLink>
           <div className='dropdown dropdown-end z-50'>
             <button className="">Dashboard</button>
 

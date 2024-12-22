@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Navigate, useLocation } from 'react-router-dom'
 import { useContext } from 'react'
-import { AuthContext } from '../providers/AuthProvider'
+
 import LoadingSpinner from '../components/LoadingSpinner'
+import { AuthContext } from '../provider/AuthProvider'
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext)
