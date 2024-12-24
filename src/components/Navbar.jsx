@@ -30,13 +30,16 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
             className="menu menu-sm dropdown-content z-50 bg-white rounded-box mt-3 w-52 p-2 shadow">
             <li> <Link to="/all-marathon">Marathons</Link></li>
             <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
               <Link to='/add-marathon'>Add Marathon</Link>
             </li>
             <li>
-              <Link to='/my-marathon'>My Marathon List</Link>
+              <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
             </li>
             <li>
-              <Link to='/my-apply'>My Apply List</Link>
+              <Link to={`/my-apply/${user?.email}`}>My Apply List</Link>
             </li>
           </ul>
         </div>
@@ -44,28 +47,39 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">
-          <NavLink to="/all-marathon">Marathons</NavLink>
-          <div className='dropdown dropdown-end z-50'>
-            <button className="">Dashboard</button>
+          {
+            user?.email ?
+              (
+                <div>
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/all-marathon"><span className="m-3">Marathons</span></NavLink>
+                  <div className='dropdown dropdown-end z-50'>
+                    <button className="">Dashboard</button>
 
-            <ul tabIndex={0}
-              className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
-            >
-              <li>
-                <Link to='/add-marathon' className='justify-between'>
-                  Add Marathon
-                </Link>
-              </li>
-              <li>
-                <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
-              </li>
-              <li>
-                <Link to={`/my-apply/${user?.email}`}>My Apply List</Link>
-              </li>
-
-
-            </ul>
-          </div>
+                    <ul tabIndex={0}
+                      className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+                    >
+                      <li>
+                        <Link to='/add-marathon' className='justify-between'>
+                          Add Marathon
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
+                      </li>
+                      <li>
+                        <Link to={`/my-apply/${user?.email}`}>My Apply List</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) :
+              ( <div>
+                <NavLink to="/all-marathon">Marathons</NavLink>
+                <NavLink to="/"><span className="m-3">Home</span></NavLink>
+                </div>
+              )
+          }
         </div>
       </div>
       <div className="navbar-end">

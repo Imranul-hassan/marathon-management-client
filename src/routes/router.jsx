@@ -10,6 +10,9 @@ import MyApply from "../pages/MyApply";
 import AllMarathon from "../pages/AllMarathon";
 import PrivateRoute from "./PrivateRoute";
 import MarathonDetails from "../pages/MarathonDetails";
+import UpdateMyMarathon from "../components/UpdateMyMarathon";
+import UpdateMyApply from "../components/UpdateMyApply";
+import MarathonRegistration from "../components/MarathonRegistration";
 
 
 const router = createBrowserRouter([
@@ -43,6 +46,14 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/marathon/${params.id}`)
       },
       {
+        path: '/registration/:id',
+        element: <PrivateRoute>
+          <MarathonRegistration></MarathonRegistration>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/registration/${params.id}`)
+      },
+
+      {
         path: '/add-marathon',
         element: <PrivateRoute>
           <AddMarathon></AddMarathon>
@@ -56,11 +67,25 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}`)
       },
       {
+        path: '/my-marathon/:email/update-marathon/:id',
+        element: <PrivateRoute>
+         <UpdateMyMarathon></UpdateMyMarathon>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}/update-marathon/:${params.id}`)
+      },
+      {
         path: '/my-apply/:email',
         element: <PrivateRoute>
          <MyApply></MyApply>
         </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/my-apply/${params.email}`)
+      },
+      {
+        path: '/my-apply/:email/update-apply/:id',
+        element: <PrivateRoute>
+          <UpdateMyApply></UpdateMyApply>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/my-apply/${params.email}/update-apply/${params.id}`)
       }
     ]
   },
