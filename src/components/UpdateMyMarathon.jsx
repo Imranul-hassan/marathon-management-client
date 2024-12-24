@@ -6,8 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const UpdateMyMarathon = () => {
 
-    const { user } = useContext(AuthContext);
-    const marathon = useLoaderData()
+    const updatemarathon = useLoaderData()
     const {
         _id,
         marathon_title,
@@ -22,7 +21,10 @@ const UpdateMyMarathon = () => {
         email,
         total_registration_count,
         createdAt
-    } = marathon
+    } = updatemarathon;
+    console.log(updatemarathon)
+
+    const { user } = useContext(AuthContext);
 
     const handleUpdateMarathon = event => {
         event.preventDefault();
@@ -36,10 +38,6 @@ const UpdateMyMarathon = () => {
         const location = form.location.value;
         const running_distance = form.running_distance.value;
         const description = form.description.value;
-        const name = user?.displayName;
-        const email = user?.email;
-        const total_registration_count = 0;
-        const createdAt = new Date();
 
         const updateMarathon = {
             marathon_title,
@@ -50,10 +48,7 @@ const UpdateMyMarathon = () => {
             location,
             running_distance,
             description,
-            name,
-            email,
-            total_registration_count,
-            createdAt
+        
         };
 
         fetch(`${import.meta.env.VITE_API_URL}/marathon/${_id}`, {
@@ -66,10 +61,10 @@ const UpdateMyMarathon = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.insertedId) {
+                if(data.modifiedCount > 0){
                     Swal.fire({
                         title: 'sucess!',
-                        text: 'Added successfully',
+                        text: 'Marathon updated successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })

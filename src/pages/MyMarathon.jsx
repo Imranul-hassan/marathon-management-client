@@ -96,9 +96,10 @@ const MyMarathon = () => {
                                     <td className="border border-gray-300 px-3 py-2">{marathon.running_distance}</td>
                                     <td className="border border-gray-300 px-3 py-2">
 
-                                        <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
+                                         <Link to = {`/my-marathon/${user?.email}/update-marathon/${marathon._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
                                             Update
                                         </button>
+                                        </Link>
 
                                         <button onClick={() => handleDelete(marathon._id)}
                                             className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">

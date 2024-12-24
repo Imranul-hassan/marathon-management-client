@@ -87,9 +87,9 @@ const MyApply = () => {
                                     <td className="border border-gray-300 px-3 py-2">{apply.contactNumber}</td>
                                     <td className="border border-gray-300 px-3 py-2">
 
-                                        <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
+                                       <Link to = {`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
                                             Update
-                                        </button>
+                                        </button></Link>
 
                                         <button onClick={() => handleDelete(apply._id)}
                                             className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
@@ -110,7 +110,7 @@ const MyApply = () => {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <UpdateMyApply applies={applies}></UpdateMyApply>
+                <UpdateMyApply ></UpdateMyApply>
                 <button onClick={closeModal}>close</button>
 
             </Modal>

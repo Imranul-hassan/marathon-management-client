@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
          <UpdateMyMarathon></UpdateMyMarathon>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}/update-marathon/:${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}/update-marathon/${params.id}`)
       },
       {
         path: '/my-apply/:email',

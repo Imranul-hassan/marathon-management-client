@@ -1,54 +1,69 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateMyApply = () => {
+    const updateApply = useLoaderData()
+    const {
+        _id,
+        marathonTitle,
+        marathonStartDate,
+        email,
+        firstName,
+        lastName,
+        contactNumber,
+        additionalInfo, } = updateApply
     const { user } = useContext(AuthContext)
-    const apply = useLoaderData()
-    const {  
-        marathon_title,
-        marathon_start_date,
-        first_name,
-        last_name,
-        contact_number,
-        additional_info} = apply
-    const handleRegister = (event) => {
+
+    const updateRegister = (event) => {
         event.preventDefault();
         const form = event.target;
 
         const email = form.email.value;
         const marathonTitle = form.marathon_title.value;
-        const marathonStartDate = form.marathon_start_date;
+        const marathonStartDate = form.marathon_start_date.value;
         const firstName = form.first_name.value;
         const lastName = form.last_name.value;
         const contactNumber = form.contact_number.value;
         const additionalInfo = form.additional_info.value;
 
-        const registrationDetails = {
+        const updateRegistration = {
+            email,
             marathonTitle,
             marathonStartDate,
-            email,
             firstName,
             lastName,
             contactNumber,
             additionalInfo,
         };
 
-        fetch(`${import.meta.env.VITE_API_URL}/registrations`, {
-            method: 'POST',
+        fetch(`${import.meta.env.VITE_API_URL}/registration/${_id}`, {
+            method: 'PUT',
             headers: {
-                'Content-Type': 'application/json',
+                'content-type': 'application/json'
             },
-            body: JSON.stringify(registrationDetails),
+            body: JSON.stringify(updateRegistration)
         })
-            .then((res) => res.json())
-            .catch((error) => console.error('Error:', error));
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'sucess!',
+                        text: 'Registration updated successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+
     };
     return (
         <div>
             <h3 className="text-2xl text-center font-bold py-2 text-black">Update MY Apply</h3>
 
-            <form onSubmit={handleRegister} className="mt-6">
+            <form onSubmit={updateRegister} className="mt-6">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                         <label className="block font-bold text-gray-600">Email</label>
@@ -64,7 +79,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">Marathon Title</label>
                         <input
                             type="text"
-                            defaultValue={marathon_title} readOnly
+                            defaultValue={marathonTitle} readOnly
                             name="marathon_title"
                             placeholder="Marathon Title"
                             className="input input-bordered w-full"
@@ -75,7 +90,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">Start Date</label>
                         <input
                             type="text"
-                            defaultValue={marathon_start_date} readOnly
+                            defaultValue={marathonStartDate} readOnly
                             name="marathon_start_date"
                             placeholder="Start Date"
                             className="input input-bordered w-full"
@@ -86,7 +101,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">First Name</label>
                         <input
                             type="text"
-                            defaultValue={first_name}
+                            defaultValue={firstName}
                             name="first_name"
                             placeholder="First Name"
                             className="input input-bordered w-full"
@@ -97,7 +112,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">Last Name</label>
                         <input
                             type="text"
-                            defaultValue={last_name}
+                            defaultValue={lastName}
                             name="last_name"
                             placeholder="Last Name"
                             className="input input-bordered w-full"
@@ -108,7 +123,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">Contact Number</label>
                         <input
                             type="text"
-                            defaultValue={contact_number}
+                            defaultValue={contactNumber}
                             name="contact_number"
                             placeholder="Contact Number"
                             className="input input-bordered w-full"
@@ -119,7 +134,7 @@ const UpdateMyApply = () => {
                         <label className="block font-bold text-gray-600">Additional Info</label>
                         <textarea
                             name="additional_info"
-                            defaultValue={additional_info}
+                            defaultValue={additionalInfo}
                             placeholder="Any additional information"
                             className="textarea textarea-bordered w-full"
                         ></textarea>
