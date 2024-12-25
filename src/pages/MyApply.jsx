@@ -30,6 +30,7 @@ const MyApply = () => {
         overlay: { backgroundColor: 'rgba(0, 0, 0, 0.75)' },
     };
 
+
     const handleDelete = (_id) => {
         console.log(_id)
         Swal.fire({
@@ -64,6 +65,7 @@ const MyApply = () => {
     return (
         <div className="mb-10">
             <h2 className="text-2xl font-bold text-center p-5">My Apply</h2>
+
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
@@ -87,7 +89,7 @@ const MyApply = () => {
                                     <td className="border border-gray-300 px-3 py-2">{apply.contactNumber}</td>
                                     <td className="border border-gray-300 px-3 py-2">
 
-                                       <Link to = {`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
+                                        <Link to={`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
                                             Update
                                         </button></Link>
 

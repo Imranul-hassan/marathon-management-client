@@ -9,14 +9,8 @@ const MarathonRegistration = () => {
     const marathon = useLoaderData()
     const {
         _id,
-        photo,
         marathon_title,
-        location,
-        start_registration_date,
-        end_registration_date,
         marathon_start_date,
-        description,
-        total_registration_count,
     } = marathon;
 
     const handleRegister = (event) => {
@@ -30,6 +24,7 @@ const MarathonRegistration = () => {
         const lastName = form.last_name.value;
         const contactNumber = form.contact_number.value;
         const additionalInfo = form.additional_info.value;
+        const marathonId = _id
 
         const registrationDetails = {
             marathonTitle,
@@ -39,6 +34,7 @@ const MarathonRegistration = () => {
             lastName,
             contactNumber,
             additionalInfo,
+            marathonId
         };
 
         fetch(`${import.meta.env.VITE_API_URL}/registrations`, {
@@ -49,6 +45,10 @@ const MarathonRegistration = () => {
             body: JSON.stringify(registrationDetails),
         })
             .then((res) => res.json())
+            .then((data) => {
+                console.log('Registration saved:', data);
+                window.location.href = `/my-apply/${user?.email}`;
+            })
             .catch((error) => console.error('Error:', error));
     };
     return (

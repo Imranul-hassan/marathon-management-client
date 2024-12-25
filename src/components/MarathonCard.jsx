@@ -41,6 +41,10 @@ const MarathonCard = ({ marathon }) => {
                         <span className="font-bold">Registration End:</span>{" "}
                         {new Date(end_registration_date).toLocaleDateString()}
                     </p>
+                    <p className="text-sm text-gray-500">
+                        <span className="font-bold">Created At:</span>{" "}
+                        {new Date(createdAt).toLocaleDateString()}
+                    </p>
                     <div className="card-actions mt-4">
                         <Link to={`/marathon-details/${marathon._id}`}>
                             <button className="text-base btn text-white bg-teal-800 hover:bg-teal-600 rounded-full py-2 px-6">
