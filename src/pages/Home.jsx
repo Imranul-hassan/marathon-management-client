@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Carousel from "../components/Carousel";
-import MarathonCard from "../components/MarathonCard";
 import { Helmet } from "react-helmet-async";
 import UpcomingMarathon from "../components/UpcomingMarathon";
 import FAQ from "../components/FAQ";
 import Impact from "../components/Impact";
+
+import MarathonCard from "../components/MarathonCard";
 
 const Home = () => {
     const marathons = useLoaderData()
