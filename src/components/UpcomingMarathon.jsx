@@ -1,4 +1,10 @@
 import marathon from "../assets/marathon-1.webp"
+import marathon2 from "../assets/marathon-2.webp"
+import run from "../assets/run-1.jpg"
+import run2 from "../assets/run-2.jpg"
+import run3 from "../assets/sun-3.jpg"
+import run4 from "../assets/run-4.jpg"
+
 const UpcomingMarathon = () => {
     return (
         <div>
@@ -12,7 +18,7 @@ const UpcomingMarathon = () => {
 
                         <div className="bg-blue-100 hover:bg-gray-300 shadow-lg p-3 rounded-lg">
                             <div>
-                                <img className="w-full h-44 rounded-md" src={marathon} alt="" />
+                                <img className="w-full h-44 rounded-md" src={run2} alt="" />
                             </div>
                             <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
                             <p className="text-sm text-gray-500 mt-2">
@@ -27,7 +33,7 @@ const UpcomingMarathon = () => {
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
-                                <img className="w-full h-44 rounded-md" src={marathon} alt="" />
+                                <img className="w-full h-44 rounded-md" src={run} alt="" />
                             </div>
                             <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Urban Adventure Race 2024</h1>
                             <p className="text-sm text-gray-500 mt-2">
@@ -43,7 +49,7 @@ const UpcomingMarathon = () => {
 
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg ">
                         <div>
-                                <img className="w-full h-44 rounded-md" src={marathon} alt="" />
+                                <img className="w-full h-44 rounded-md" src={marathon2} alt="" />
                             </div>
                             <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">City Strides Marathon</h1>
                             <p className="text-sm text-gray-500 mt-2">
@@ -58,7 +64,7 @@ const UpcomingMarathon = () => {
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
-                                <img className="w-full h-44 rounded-md" src={marathon} alt="" />
+                                <img className="w-full h-44 rounded-md" src={run3} alt="" />
                             </div>
                             <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Heart & Sole Marathon</h1>
                             <p className="text-sm text-gray-500 mt-2">
@@ -88,7 +94,7 @@ const UpcomingMarathon = () => {
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
-                                <img className="w-full h-44 rounded-md" src={marathon} alt="" />
+                                <img className="w-full h-44 rounded-md" src={run4} alt="" />
                             </div>
                             <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Peak Performance Race</h1>
                             <p className="text-sm text-gray-500 mt-2">
