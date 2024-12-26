@@ -5,6 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import Modal from 'react-modal';
 import UpdateMyMarathon from "../components/UpdateMyMarathon";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const MyMarathon = () => {
     // const myMarathon = useLoaderData();
@@ -72,6 +73,7 @@ const MyMarathon = () => {
     }
     return (
         <div className="mb-10">
+             <Helmet><title>My Marathon | Marathon Management System</title></Helmet>
             <h2 className="text-2xl font-bold text-center p-5">My Marathons</h2>
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">

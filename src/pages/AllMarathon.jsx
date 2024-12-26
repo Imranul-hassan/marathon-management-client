@@ -23,7 +23,7 @@ const AllMarathon = () => {
 
     return (
         <div>
-            
+             <Helmet><title>Marathons | Marathon Management System</title></Helmet>
             <div className=" mt-2 mb-4 font-semibold text-lg">
                 <label>Sort by: </label>
                 <select

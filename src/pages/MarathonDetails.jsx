@@ -45,6 +45,7 @@ const MarathonDetails = () => {
   };
 
   return (
+    
     <div className="md:w-9/12 p-5 m-6 mx-auto bg-white rounded-lg shadow-lg">
 
       <div className=' md:flex gap-6'>

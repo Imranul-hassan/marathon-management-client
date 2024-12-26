@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import UpdateMyApply from "../components/UpdateMyApply";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const MyApply = () => {
     // const myApply = useLoaderData();
@@ -14,33 +15,22 @@ const MyApply = () => {
     const [search, setSearch] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        const fetchRegistrations = async () => {
-            // try {
-            //     const { data } = await axios.get(
-            //         `${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,
-            //         {
-            //             withCredentials: true, 
-            //         }
-            //     );
-            //     setApplies(data); 
-            // } catch (error) {
-            //     console.error("Error fetching registrations:", error); 
-            // }
-            const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,{
-                withCredentials: true
-            })
-            setApplies(data)
-        };
-        fetchRegistrations();
-    }, [search, user.email]);
+    // useEffect(() => {
+    //     const fetchRegistrations = async () => {
+    //         const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,{
+    //             withCredentials: true
+    //         })
+    //         setApplies(data)
+    //     };
+    //     fetchRegistrations();
+    // }, [search, user.email]);
 
-    // useEffect(()=>{
-    //     axios.get(` https://marathon-management-server-zeta.vercel.app/my-apply/${user.email}`,{
-    //         withCredentials: true
-    //     })
-    //     .then(res => setApplies(res.data))
-    // },[user.email])
+    useEffect(()=>{
+        axios.get(` https://marathon-management-server-zeta.vercel.app/my-apply/${user.email}`,{
+            withCredentials: true
+        })
+        .then(res => setApplies(res.data))
+    },[user.email])
 
     function openModal() {
         setIsOpen(true);
@@ -88,7 +78,9 @@ const MyApply = () => {
         });
     }
     return (
+        
         <div className="mb-10">
+             <Helmet><title>My Apply | Marathon Management System</title></Helmet>
             <h2 className="text-2xl font-bold text-center p-5">My Apply</h2>
             <input
                 type="text"

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const UpdateMyApply = () => {
     const updateApply = useLoaderData()
@@ -61,6 +62,7 @@ const UpdateMyApply = () => {
     };
     return (
         <div>
+            <Helmet><title>Update My Apply | Marathon Management System</title></Helmet>
             <h3 className="text-2xl text-center font-bold py-2 text-black">Update MY Apply</h3>
 
             <form onSubmit={updateRegister} className="mt-6">

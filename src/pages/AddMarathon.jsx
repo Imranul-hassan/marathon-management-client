@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const AddMarathon = () => {
     const { user } = useContext(AuthContext);
@@ -44,8 +45,8 @@ const AddMarathon = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newMarathon),
-            credentials: 'include'
+            body: JSON.stringify(newMarathon)
+            
         })
             .then(res => res.json())
             .then(data => {
@@ -64,6 +65,7 @@ const AddMarathon = () => {
     }
     return (
         <div className="bg-slate-700 m-5 rounded-lg">
+             <Helmet><title>Add Marathon | Marathon Management System</title></Helmet>
             <h3 className="text-2xl text-center font-bold py-2 text-white">Add New Marathon</h3>
             <form onSubmit={handleAddMarathon}>
                 <div>
