@@ -1,8 +1,25 @@
-# React + Vite
+# Marathon Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marathon Management System is a platform that helps organize marathon events by connecting event organizers with participants. Users can create marathons, sign up for events, and manage their registrations through a personal dashboard.
 
-Currently, two official plugins are available:
+## Live Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Live Site Link**: [Marathon Management System](https://marathon-management-system.netlify.app/).
+
+## Features
+
+- **User Authentication**: Secure email/password-based login with JWT authentication.
+- **Event Management**: Organizers can create, update, and delete marathons.
+- **Registration Management**: Users can apply for marathons, update, or delete their registrations.
+- **Dynamic Page Titles**: The website title changes dynamically based on the current route.
+- **Countdown Timer**: A real-time countdown to the marathon start date on the details page.
+- **Private Routes**: Protected pages requiring authentication for access.
+- **Responsive Design**: Fully optimized layout for both mobile and desktop devices.
+
+
+## Technologies Used
+
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT Authentication

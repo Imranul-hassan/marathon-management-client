@@ -45,7 +45,7 @@ const MarathonDetails = () => {
   };
 
   return (
-    <div className="w-9/12 p-5 m-6 mx-auto bg-white rounded-lg shadow-lg">
+    <div className="md:w-9/12 p-5 m-6 mx-auto bg-white rounded-lg shadow-lg">
 
       <div className=' md:flex gap-6'>
         <div className=''> <img src={photo} alt={marathon_title} className="w-full h-64 object-cover rounded-md" /></div>

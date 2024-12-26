@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import MarathonCard from "../components/MarathonCard";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllMarathon = () => {
     const initialMarathons = useLoaderData()
@@ -22,6 +23,7 @@ const AllMarathon = () => {
 
     return (
         <div>
+            
             <div className=" mt-2 mb-4 font-semibold text-lg">
                 <label>Sort by: </label>
                 <select
