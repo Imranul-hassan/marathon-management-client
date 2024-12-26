@@ -38,12 +38,14 @@ const AddMarathon = () => {
         };
 
         console.log(newMarathon);
+
         fetch(`${import.meta.env.VITE_API_URL}/marathon`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newMarathon)
+            body: JSON.stringify(newMarathon),
+             credentials: 'include'
         })
             .then(res => res.json())
             .then(data => {

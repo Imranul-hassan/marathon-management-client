@@ -1,17 +1,25 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import Modal from 'react-modal';
 import UpdateMyMarathon from "../components/UpdateMyMarathon";
+import axios from "axios";
 
 const MyMarathon = () => {
-    const myMarathon = useLoaderData();
+    // const myMarathon = useLoaderData();
     const { user } = useContext(AuthContext)
 
-    const [marathons, setMarathons] = useState(myMarathon)
+    const [marathons, setMarathons] = useState([])
 
     const [modalIsOpen, setIsOpen] = useState(false);
+
+    useEffect(()=>{
+        axios.get(`http://localhost:5000/my-marathon/${user.email}`,{
+            withCredentials: true
+        })
+        .then(res => setMarathons(res.data))
+    },[user.email])
 
     function openModal() {
         setIsOpen(true);

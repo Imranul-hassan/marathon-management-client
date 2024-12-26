@@ -1,25 +1,40 @@
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import Modal from 'react-modal';
 import UpdateMyApply from "../components/UpdateMyApply";
+import axios from "axios";
 
 const MyApply = () => {
-    const myApply = useLoaderData();
+    // const myApply = useLoaderData();
     const { user } = useContext(AuthContext)
-
-    const [applies, setApplies] = useState(myApply)
-
+    const [applies, setApplies] = useState([])
+    const [search, setSearch] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const fetchRegistrations = async () => {
+            // try {
+            //     // const response = await fetch(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`);
+            //     // const registrations = await response.json();
+            //     // setApplies(registrations);
+
+            // } catch (error) {
+            //     console.error('Error fetching registrations:', error);
+            // }
+            const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,{
+                withCredentials: true
+            })
+                setApplies(data)
+        };
+        fetchRegistrations();
+    }, [search, user.email]);
 
     function openModal() {
         setIsOpen(true);
     }
-    // function afterOpenModal() {
-
-    // }
 
     function closeModal() {
         setIsOpen(false);
@@ -65,6 +80,13 @@ const MyApply = () => {
     return (
         <div className="mb-10">
             <h2 className="text-2xl font-bold text-center p-5">My Apply</h2>
+            <input
+                type="text"
+                className="border-2 m-2"
+                name="search"
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Enter text here..."
+            />
 
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
