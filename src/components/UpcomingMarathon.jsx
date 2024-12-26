@@ -19,25 +19,25 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Registration Start: 12/14/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Registration End: 12/14/2024</span>
+                                <span className="font-bold">Registration End: 12/30/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 02/14/2025</span>
                             </p>
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Urban Adventure Race 2024</h1>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Registration Start: 12/14/2024</span>
+                                <span className="font-bold">Registration Start: 12/15/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Registration End: 12/14/2024</span>
+                                <span className="font-bold">Registration End: 12/24/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 12/29/2024</span>
                             </p>
                         </div>
 
@@ -45,37 +45,37 @@ const UpcomingMarathon = () => {
                         <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">City Strides Marathon</h1>
                             <p className="text-sm text-gray-500 mt-2">
                                 <span className="font-bold">Registration Start: 12/14/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Registration End: 12/14/2024</span>
+                                <span className="font-bold">Registration End: 12/28/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 01/18/2025</span>
                             </p>
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Heart & Sole Marathon</h1>
                             <p className="text-sm text-gray-500 mt-2">
                                 <span className="font-bold">Registration Start: 12/14/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Registration End: 12/14/2024</span>
+                                <span className="font-bold">Registration End: 12/22/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 01/12/2025</span>
                             </p>
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Chasing Horizons 2024</h1>
                             <p className="text-sm text-gray-500 mt-2">
                                 <span className="font-bold">Registration Start: 12/14/2024</span>
                             </p>
@@ -83,14 +83,14 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Registration End: 12/14/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 12/29/2024</span>
                             </p>
                         </div>
                         <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Peak Performance Race</h1>
                             <p className="text-sm text-gray-500 mt-2">
                                 <span className="font-bold">Registration Start: 12/14/2024</span>
                             </p>
@@ -98,7 +98,7 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Registration End: 12/14/2024</span>
                             </p>
                             <p className="text-sm text-gray-500 mt-2">
-                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                                <span className="font-bold">Marathon Start: 12/28/2024</span>
                             </p>
                         </div>
 

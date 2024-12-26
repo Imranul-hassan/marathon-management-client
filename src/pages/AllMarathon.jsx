@@ -24,6 +24,7 @@ const AllMarathon = () => {
     return (
         <div>
              <Helmet><title>Marathons | Marathon Management System</title></Helmet>
+             <h2 className="text-2xl font-bold text-center p-5">All Marathon</h2>
             <div className=" mt-2 mb-4 font-semibold text-lg">
                 <label>Sort by: </label>
                 <select
