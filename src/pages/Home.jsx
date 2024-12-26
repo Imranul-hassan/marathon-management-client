@@ -4,6 +4,7 @@ import MarathonCard from "../components/MarathonCard";
 import { Helmet } from "react-helmet-async";
 import UpcomingMarathon from "../components/UpcomingMarathon";
 import FAQ from "../components/FAQ";
+import Impact from "../components/Impact";
 
 const Home = () => {
     const marathons = useLoaderData()
@@ -29,6 +30,7 @@ const Home = () => {
             </div>
             <UpcomingMarathon></UpcomingMarathon>
             <FAQ></FAQ>
+            <Impact></Impact>
         </div>
     );
 };
