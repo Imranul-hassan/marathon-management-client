@@ -7,7 +7,7 @@ const Footer = () => {
     const { user } = useContext(AuthContext)
     return (
         <div>
-            <footer className="footer bg-[#248b83] text-white rounded p-10 flex flex-wrap justify-between items-center">
+            <footer className="footer bg-[#2c598d] text-white rounded p-10 flex flex-wrap justify-between items-center">
                 {/* Left Section */}
                 <aside className="flex items-center space-x-4">
                     <div className="w-12">

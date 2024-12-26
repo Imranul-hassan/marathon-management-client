@@ -51,12 +51,12 @@ const MarathonRegistration = () => {
             .catch((error) => console.error('Error:', error));
     };
     return (
-        <div>
-
+        <div className="bg-white m-5 rounded-lg p-5">
+            <h3 className="text-2xl text-center font-bold py-2 text-black">Marathon Registration</h3>
             <form onSubmit={handleRegister} className="mt-6">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label className="block font-bold text-gray-600">Email</label>
+                        <label className="block font-bold text-black">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -66,7 +66,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Marathon Title</label>
+                        <label className="block font-bold text-black">Marathon Title</label>
                         <input
                             type="text"
                             defaultValue={marathon_title} readOnly
@@ -77,7 +77,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Start Date</label>
+                        <label className="block font-bold text-black">Start Date</label>
                         <input
                             type="text"
                             defaultValue={marathon_start_date} readOnly
@@ -88,7 +88,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">First Name</label>
+                        <label className="block font-bold text-black">First Name</label>
                         <input
                             type="text"
                             name="first_name"
@@ -98,7 +98,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Last Name</label>
+                        <label className="block font-bold text-black">Last Name</label>
                         <input
                             type="text"
                             name="last_name"
@@ -108,7 +108,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Contact Number</label>
+                        <label className="block font-bold text-black">Contact Number</label>
                         <input
                             type="text"
                             name="contact_number"
@@ -118,7 +118,7 @@ const MarathonRegistration = () => {
                         />
                     </div>
                     <div className="sm:col-span-2">
-                        <label className="block font-bold text-gray-600">Additional Info</label>
+                        <label className="block font-bold text-black">Additional Info</label>
                         <textarea
                             name="additional_info"
                             placeholder="Any additional information"
@@ -129,7 +129,7 @@ const MarathonRegistration = () => {
                 <div className="mt-4">
                     <button
                         type="submit"
-                        className="btn bg-teal-700 hover:bg-teal-600 text-white w-full"
+                        className="btn bg-[#2c598d] hover:bg-[#1a3553] text-white w-full"
                     >
                         Register
                     </button>

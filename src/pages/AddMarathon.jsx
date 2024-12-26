@@ -161,7 +161,7 @@ const AddMarathon = () => {
                     <input
                         type="submit"
                         value="Add New Marathon"
-                        className="btn btn-block bg-teal-600 mb-4 text-white"
+                        className="btn btn-block bg-[#2c598d] hover:bg-[#1a3553] mb-4 text-white"
                     />
                 </div>
             </form>

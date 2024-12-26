@@ -8,7 +8,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
 
 
   return (
-    <div className="navbar md:w-11/12 mx-auto text-black ">
+    <div className="navbar md:w-11/12 mx-auto text-white ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content z-50 bg-white rounded-box mt-3 w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content z-50 bg-[#2c598d] rounded-box mt-3 w-52 p-2 shadow">
             <li> <Link to="/all-marathon">Marathons</Link></li>
             <li>
               <Link to='/'>Home</Link>
@@ -57,7 +57,7 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
                     <button className="">Dashboard</button>
 
                     <ul tabIndex={0}
-                      className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
+                      className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#2c598d] rounded-box w-52'
                     >
                       <li>
                         <Link to='/add-marathon' className='justify-between'>
