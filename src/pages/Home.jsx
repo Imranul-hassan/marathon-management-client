@@ -12,7 +12,7 @@ const Home = () => {
             <Helmet><title>Home | Marathon Management System</title></Helmet>
             <Carousel></Carousel>
             <div>
-                <div className="w-9/12 mx-auto text-center ">
+                <div className="w-9/12 mx-auto text-center mb-8">
                     <h1 className="font-semibold text-3xl md:text-4xl my-3 ">Run Towards Your Goals</h1>
                     <p>Discover exciting marathon events tailored for all fitness levels. Whether you're aiming to conquer your first 5K or a full marathon, join a community of passionate runners and take the next step towards your goals. </p>
                 </div>

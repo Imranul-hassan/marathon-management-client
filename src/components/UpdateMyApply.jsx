@@ -61,14 +61,14 @@ const UpdateMyApply = () => {
 
     };
     return (
-        <div>
+        <div className="bg-slate-500 m-5 rounded-lg p-5">
             <Helmet><title>Update My Apply | Marathon Management System</title></Helmet>
-            <h3 className="text-2xl text-center font-bold py-2 text-black">Update MY Apply</h3>
+            <h3 className="text-2xl text-center font-bold py-2 text-white">Update MY Apply</h3>
 
             <form onSubmit={updateRegister} className="mt-6">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label className="block font-bold text-gray-600">Email</label>
+                        <label className="block font-bold text-white">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -78,7 +78,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Marathon Title</label>
+                        <label className="block font-bold text-white">Marathon Title</label>
                         <input
                             type="text"
                             defaultValue={marathonTitle} readOnly
@@ -89,7 +89,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Start Date</label>
+                        <label className="block font-bold text-white">Start Date</label>
                         <input
                             type="text"
                             defaultValue={marathonStartDate} readOnly
@@ -100,7 +100,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">First Name</label>
+                        <label className="block font-bold text-white">First Name</label>
                         <input
                             type="text"
                             defaultValue={firstName}
@@ -111,7 +111,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Last Name</label>
+                        <label className="block font-bold text-white">Last Name</label>
                         <input
                             type="text"
                             defaultValue={lastName}
@@ -122,7 +122,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div>
-                        <label className="block font-bold text-gray-600">Contact Number</label>
+                        <label className="block font-bold text-white">Contact Number</label>
                         <input
                             type="text"
                             defaultValue={contactNumber}
@@ -133,7 +133,7 @@ const UpdateMyApply = () => {
                         />
                     </div>
                     <div className="sm:col-span-2">
-                        <label className="block font-bold text-gray-600">Additional Info</label>
+                        <label className="block font-bold text-white">Additional Info</label>
                         <textarea
                             name="additional_info"
                             defaultValue={additionalInfo}
@@ -145,7 +145,7 @@ const UpdateMyApply = () => {
                 <div className="mt-4">
                     <button
                         type="submit"
-                        className="btn bg-teal-700 hover:bg-teal-600 text-white w-full"
+                        className="btn bg-teal-600 hover:bg-teal-600 text-white w-full"
                     >
                         Register
                     </button>

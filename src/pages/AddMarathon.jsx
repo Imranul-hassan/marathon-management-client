@@ -64,7 +64,7 @@ const AddMarathon = () => {
 
     }
     return (
-        <div className="bg-slate-700 m-5 rounded-lg">
+        <div className="bg-slate-500 m-5 rounded-lg">
              <Helmet><title>Add Marathon | Marathon Management System</title></Helmet>
             <h3 className="text-2xl text-center font-bold py-2 text-white">Add New Marathon</h3>
             <form onSubmit={handleAddMarathon}>

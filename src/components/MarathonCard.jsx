@@ -19,13 +19,13 @@ const MarathonCard = ({ marathon }) => {
     return (
         <div>
             <div className="card bg-white shadow-2xl rounded-2xl mb-5">
-                {/* <figure className="w-full h-48 p-4">
+                <figure className="w-full h-48 p-4">
                     <img
                         src={photo}
                         alt={marathon_title}
                         className="w-full h-full rounded-lg object-cover"
                     />
-                </figure> */}
+                </figure>
                 <div className="card-body p-6">
                     <h2 className="card-title text-xl font-bold text-gray-800">
                         {marathon_title}
@@ -47,7 +47,7 @@ const MarathonCard = ({ marathon }) => {
                     </p>
                     <div className="card-actions mt-4">
                         <Link to={`/marathon-details/${marathon._id}`}>
-                            <button className="text-base btn text-white bg-teal-800 hover:bg-teal-600 rounded-full py-2 px-24">
+                            <button className="text-base btn text-white bg-[#264261] hover:bg-[#2c598d] rounded-full py-2 px-24">
                                 See Details
                             </button>
                         </Link>

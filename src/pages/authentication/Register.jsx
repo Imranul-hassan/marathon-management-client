@@ -1,7 +1,6 @@
 
 import { Link, useNavigate } from 'react-router-dom'
-// import bgImg from '../../assets/images/register.jpg'
-// import logo from '../../assets/images/logo.png'
+import bgImg from '../../assets/register.jpg'
 import { useContext } from 'react'
 
 import toast from 'react-hot-toast'
@@ -50,11 +49,8 @@ const Registration = () => {
     <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
       <div className='flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl '>
         <div className='w-full px-6 py-8 md:px-8 lg:w-1/2'>
-          {/* <div className='flex justify-center mx-auto'>
-            <img className='w-auto h-7 sm:h-8' src={logo} alt='' />
-          </div> */}
 
-          <p className='mt-3 text-xl text-center text-gray-600 '>
+          <p className='mt-3 text-xl text-center text-[#112548] font-semibold'>
             Get Your Free Account Now.
           </p>
 
@@ -165,7 +161,7 @@ const Registration = () => {
             <div className='mt-6'>
               <button
                 type='submit'
-                className='w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50'
+                className='w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#112548] rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50'
               >
                 Sign Up
               </button>
@@ -185,12 +181,12 @@ const Registration = () => {
             <span className='w-1/5 border-b  md:w-1/4'></span>
           </div>
         </div>
-        {/* <div
+        <div
           className='hidden bg-cover bg-center lg:block lg:w-1/2'
           style={{
             backgroundImage: `url(${bgImg})`,
           }}
-        ></div> */}
+        ></div>
       </div>
     </div>
   )

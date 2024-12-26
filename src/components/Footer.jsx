@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/marathon-logo.JPG";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Footer = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div>
-            <footer className="footer bg-base-200 text-base-content rounded p-10 flex flex-wrap justify-between items-center">
+            <footer className="footer bg-[#248b83] text-white rounded p-10 flex flex-wrap justify-between items-center">
                 {/* Left Section */}
                 <aside className="flex items-center space-x-4">
                     <div className="w-12">
@@ -17,10 +21,10 @@ const Footer = () => {
                 </aside>
 
                 <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">About us</a>
+                    <Link to="/" className="link link-hover">About us</Link>
+                    <Link to="/all-marathon" className="link link-hover">Marathons</Link>
                     <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Marathons</a>
-                    <a className="link link-hover">Dashboard</a>
+                    <Link to={`/my-apply/${user?.email}`}>My Apply </Link>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

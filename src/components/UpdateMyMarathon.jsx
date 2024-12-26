@@ -181,7 +181,7 @@ const UpdateMyMarathon = () => {
                     <input
                         type="submit"
                         value="Update Marathon"
-                        className="btn btn-block bg-teal-600 mb-4 text-white"
+                        className="btn btn-block bg-teal-500 mb-4 text-white"
                     />
                 </div>
             </form>

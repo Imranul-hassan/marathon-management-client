@@ -10,7 +10,7 @@ const UpcomingMarathon = () => {
                     </div>
                     <div className=" md:grid grid-cols-3 mt-6 gap-3 animate__animated animate__bounce animate__delay-1s ">
 
-                        <div className="bg-blue-300 shadow-lg p-3 rounded-lg">
+                        <div className="bg-blue-100 hover:bg-gray-300 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
@@ -25,22 +25,38 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Marathon Start: 12/14/2024</span>
                             </p>
                         </div>
-                        <div className="bg-purple-200 shadow-lg p-3 rounded-lg">
+                        <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Creative Ideas</h1>
-                            <p>Turn your passion into impact by funding projects like  art, novels, apps, and more.</p>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Registration Start: 12/14/2024</span>
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Registration End: 12/14/2024</span>
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                            </p>
                         </div>
 
-                        <div className="bg-orange-300 shadow-lg p-3 rounded-lg ">
-                            <div>
+                        <div className="bg-blue-100 shadow-lg p-3 rounded-lg ">
+                        <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
-                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Startups</h1>
-                            <p>Transform innovative ideas into thriving businesses with community-driven funding.</p>
+                            <h1 className="font-bold text-lg text-[#1D3557] mt-5 mb-2">Annual Marathon 2024</h1>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Registration Start: 12/14/2024</span>
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Registration End: 12/14/2024</span>
+                            </p>
+                            <p className="text-sm text-gray-500 mt-2">
+                                <span className="font-bold">Marathon Start: 12/14/2024</span>
+                            </p>
                         </div>
-                        <div className="bg-blue-300 shadow-lg p-3 rounded-lg">
+                        <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
@@ -55,7 +71,7 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Marathon Start: 12/14/2024</span>
                             </p>
                         </div>
-                        <div className="bg-blue-300 shadow-lg p-3 rounded-lg">
+                        <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
@@ -70,7 +86,7 @@ const UpcomingMarathon = () => {
                                 <span className="font-bold">Marathon Start: 12/14/2024</span>
                             </p>
                         </div>
-                        <div className="bg-blue-300 shadow-lg p-3 rounded-lg">
+                        <div className="bg-blue-100 shadow-lg p-3 rounded-lg">
                             <div>
                                 <img className="w-full h-44 rounded-md" src={marathon} alt="" />
                             </div>
