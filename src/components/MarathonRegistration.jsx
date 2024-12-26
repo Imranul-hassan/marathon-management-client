@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import toast from "react-hot-toast";
 import { Navigate, useLoaderData } from "react-router-dom";
 
 const MarathonRegistration = () => {

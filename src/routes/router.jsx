@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch(`http://localhost:5000/marathon`)
+        loader: () => fetch(` https://marathon-management-server-zeta.vercel.app/marathon`)
       },
       {
         path: '/login',
@@ -36,21 +36,21 @@ const router = createBrowserRouter([
       {
         path: '/all-marathon',
         element: <AllMarathon></AllMarathon>,
-        loader: () => fetch(`http://localhost:5000/marathons`)
+        loader: () => fetch(` https://marathon-management-server-zeta.vercel.app/marathons`)
       },
       {
         path: '/marathon-details/:id',
         element: <PrivateRoute>
           <MarathonDetails></MarathonDetails>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/marathon/${params.id}`)
+        loader: ({ params }) => fetch(` https://marathon-management-server-zeta.vercel.app/marathon/${params.id}`)
       },
       {
         path: '/registration/:id',
         element: <PrivateRoute>
           <MarathonRegistration></MarathonRegistration>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/registration/${params.id}`)
+        loader: ({ params }) => fetch(` https://marathon-management-server-zeta.vercel.app/registration/${params.id}`)
       },
 
       {
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
          <UpdateMyMarathon></UpdateMyMarathon>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/my-marathon/${params.email}/update-marathon/${params.id}`)
+        loader: ({ params }) => fetch(` https://marathon-management-server-zeta.vercel.app/my-marathon/${params.email}/update-marathon/${params.id}`)
       },
       {
         path: '/my-apply/:email',
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <UpdateMyApply></UpdateMyApply>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/my-apply/${params.email}/update-apply/${params.id}`)
+        loader: ({ params }) => fetch(` https://marathon-management-server-zeta.vercel.app/my-apply/${params.email}/update-apply/${params.id}`)
       }
     ]
   },

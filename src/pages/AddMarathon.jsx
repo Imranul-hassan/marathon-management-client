@@ -45,7 +45,7 @@ const AddMarathon = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(newMarathon),
-             credentials: 'include'
+            credentials: 'include'
         })
             .then(res => res.json())
             .then(data => {

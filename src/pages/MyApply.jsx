@@ -1,11 +1,11 @@
 
 import { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
 import Modal from 'react-modal';
 import UpdateMyApply from "../components/UpdateMyApply";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const MyApply = () => {
     // const myApply = useLoaderData();
@@ -17,20 +17,30 @@ const MyApply = () => {
     useEffect(() => {
         const fetchRegistrations = async () => {
             // try {
-            //     // const response = await fetch(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`);
-            //     // const registrations = await response.json();
-            //     // setApplies(registrations);
-
+            //     const { data } = await axios.get(
+            //         `${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,
+            //         {
+            //             withCredentials: true, 
+            //         }
+            //     );
+            //     setApplies(data); 
             // } catch (error) {
-            //     console.error('Error fetching registrations:', error);
+            //     console.error("Error fetching registrations:", error); 
             // }
             const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,{
                 withCredentials: true
             })
-                setApplies(data)
+            setApplies(data)
         };
         fetchRegistrations();
     }, [search, user.email]);
+
+    // useEffect(()=>{
+    //     axios.get(` https://marathon-management-server-zeta.vercel.app/my-apply/${user.email}`,{
+    //         withCredentials: true
+    //     })
+    //     .then(res => setApplies(res.data))
+    // },[user.email])
 
     function openModal() {
         setIsOpen(true);

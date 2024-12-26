@@ -15,7 +15,7 @@ const MyMarathon = () => {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     useEffect(()=>{
-        axios.get(`http://localhost:5000/my-marathon/${user.email}`,{
+        axios.get(` https://marathon-management-server-zeta.vercel.app/my-marathon/${user.email}`,{
             withCredentials: true
         })
         .then(res => setMarathons(res.data))
