@@ -18,7 +18,7 @@ const MarathonCard = ({ marathon }) => {
 
     return (
         <div>
-            <div className="card bg-white shadow-2xl rounded-2xl mb-5">
+            <div className="card bg-white shadow-2xl rounded-md mb-3">
                 <figure className="w-full h-48 p-4">
                     <img
                         src={photo}
@@ -44,7 +44,7 @@ const MarathonCard = ({ marathon }) => {
                     
                     <div className="card-actions mt-4">
                         <Link to={`/marathon-details/${marathon._id}`}>
-                            <button className="text-base btn text-white bg-[#264261] hover:bg-[#2c598d] rounded-full py-2 px-24">
+                            <button className="text-base btn text-white bg-[#264261] hover:bg-[#2c598d] rounded-full py-2 px-14">
                                 See Details
                             </button>
                         </Link>

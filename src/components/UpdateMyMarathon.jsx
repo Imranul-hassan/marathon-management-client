@@ -75,15 +75,15 @@ const UpdateMyMarathon = () => {
 
     }
     return (
-        <div className="bg-slate-700 m-5 rounded-lg ">
+        <div className="bg-white w-10/12 mx-auto shadow-lg text-black m-5 rounded-lg ">
              <Helmet><title>Update Marathon | Marathon Management System</title></Helmet>
-            <h3 className="text-2xl text-center font-bold py-2 text-white">Update Marathon</h3>
+            <h3 className="text-2xl text-center font-bold py-2 text-black">Update Marathon</h3>
 
             <form onSubmit={handleUpdateMarathon}>
                 <div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Marathon Title</label>
+                            <label className="font-bold text-black">Marathon Title</label>
                             <input
                                 type="text"
                                 defaultValue={marathon_title}
@@ -94,7 +94,7 @@ const UpdateMyMarathon = () => {
                             />
                         </div>
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Marathon Image URL</label>
+                            <label className="font-bold text-black">Marathon Image URL</label>
                             <input
                                 type="text"
                                 defaultValue={photo}
@@ -107,7 +107,7 @@ const UpdateMyMarathon = () => {
                     </div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Start Registration Date</label>
+                            <label className="font-bold text-black">Start Registration Date</label>
                             <input
                                 type="date"
                                 defaultValue={start_registration_date}
@@ -117,7 +117,7 @@ const UpdateMyMarathon = () => {
                             />
                         </div>
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">End Registration Date</label>
+                            <label className="font-bold text-black">End Registration Date</label>
                             <input
                                 type="date"
                                 defaultValue={end_registration_date}
@@ -129,7 +129,7 @@ const UpdateMyMarathon = () => {
                     </div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Marathon Start Date</label>
+                            <label className="font-bold text-black">Marathon Start Date</label>
                             <input
                                 type="date"
                                 defaultValue={marathon_start_date}
@@ -139,7 +139,7 @@ const UpdateMyMarathon = () => {
                             />
                         </div>
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Location</label>
+                            <label className="font-bold text-black">Location</label>
                             <input
                                 type="text"
                                 defaultValue={location}
@@ -152,7 +152,7 @@ const UpdateMyMarathon = () => {
                     </div>
                     <div className="md:flex gap-3 p-5">
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Running Distance</label>
+                            <label className="font-bold text-black">Running Distance</label>
                             <select
                                 name="running_distance"
                                 defaultValue={running_distance}
@@ -166,14 +166,14 @@ const UpdateMyMarathon = () => {
                             </select>
                         </div>
                         <div className="md:w-1/2">
-                            <label className="font-bold text-white">Description</label>
-                            <textarea
+                            <label className="font-bold text-black">Description</label>
+                            <input
                                 defaultValue={description}
                                 placeholder="Description"
                                 name="description"
-                                className="textarea-bordered w-full rounded-md"
+                                className="input input-bordered w-full rounded-md"
                                 required
-                            ></textarea>
+                            ></input>
                         </div>
                     </div>
                 </div>

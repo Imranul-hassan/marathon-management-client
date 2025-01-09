@@ -15,12 +15,12 @@ const MyMarathon = () => {
 
     const [modalIsOpen, setIsOpen] = useState(false);
 
-    useEffect(()=>{
-        axios.get(` https://marathon-management-server-zeta.vercel.app/my-marathon/${user.email}`,{
+    useEffect(() => {
+        axios.get(` https://marathon-management-server-zeta.vercel.app/my-marathon/${user.email}`, {
             withCredentials: true
         })
-        .then(res => setMarathons(res.data))
-    },[user.email])
+            .then(res => setMarathons(res.data))
+    }, [user.email])
 
     function openModal() {
         setIsOpen(true);
@@ -72,8 +72,8 @@ const MyMarathon = () => {
         });
     }
     return (
-        <div className="mb-10">
-             <Helmet><title>My Marathon | Marathon Management System</title></Helmet>
+        <div className="mb-10 w-10/12 mx-auto">
+            <Helmet><title>My Marathon | Marathon Management System</title></Helmet>
             <h2 className="text-2xl font-bold text-center p-5">My Marathons</h2>
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
@@ -106,7 +106,7 @@ const MyMarathon = () => {
                                     <td className="border border-gray-300 px-3 py-2">{marathon.running_distance}</td>
                                     <td className="border border-gray-300 px-3 py-2">
 
-                                         <Link to = {`/my-marathon/${user?.email}/update-marathon/${marathon._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
+                                        <Link to={`/my-marathon/${user?.email}/update-marathon/${marathon._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
                                             Update
                                         </button>
                                         </Link>

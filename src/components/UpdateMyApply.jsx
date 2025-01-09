@@ -61,11 +61,11 @@ const UpdateMyApply = () => {
 
     };
     return (
-        <div className="bg-white m-5 rounded-lg p-5">
+        <div className="bg-white w-10/12 mx-auto shadow-lg m-5 rounded-lg p-5">
             <Helmet><title>Update My Apply | Marathon Management System</title></Helmet>
             <h3 className="text-2xl text-center font-bold py-2 text-black">Update MY Apply</h3>
 
-            <form onSubmit={updateRegister} className="mt-6">
+            <form onSubmit={updateRegister} className="mt-3">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                         <label className="block font-bold text-black">Email</label>

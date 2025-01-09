@@ -79,7 +79,7 @@ const MyApply = () => {
     }
     return (
         
-        <div className="mb-10">
+        <div className="mb-10 w-10/12 mx-auto">
              <Helmet><title>My Apply | Marathon Management System</title></Helmet>
             <h2 className="text-2xl font-bold text-center p-5">My Apply</h2>
             <input

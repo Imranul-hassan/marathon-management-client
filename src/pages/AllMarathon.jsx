@@ -22,7 +22,7 @@ const AllMarathon = () => {
     }, [sortOrder]);
 
     return (
-        <div>
+        <div className="w-10/12 mx-auto mb-4">
              <Helmet><title>Marathons | Marathon Management System</title></Helmet>
              <h2 className="text-2xl font-bold text-center p-5">All Marathon</h2>
             <div className=" mt-2 mb-4 font-semibold text-lg">
@@ -36,7 +36,7 @@ const AllMarathon = () => {
                     <option value="asc">Oldest to Newest</option>
                 </select>
             </div>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-4 gap-3">
                 {
 
                     marathons.map(marathon => <MarathonCard key={marathon._id} marathon={marathon}>
