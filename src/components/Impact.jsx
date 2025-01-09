@@ -12,15 +12,15 @@ const Impact = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-white shadow-lg p-6 rounded-lg">
-                            <div className="text-5xl font-extrabold text-orange-600">100+</div>
+                            <div className="text-5xl font-extrabold text-[#1b3a6f]">100+</div>
                             <p className="font-semibold mt-2">Marathons Organized</p>
                         </div>
                         <div className="bg-white shadow-lg p-6 rounded-lg">
-                            <div className="text-5xl font-extrabold text-orange-600">50,00+</div>
+                            <div className="text-5xl font-extrabold text-[#1b3a6f]">50,00+</div>
                             <p className="font-semibold mt-2">Participants Engaged</p>
                         </div>
                         <div className="bg-white shadow-lg p-6 rounded-lg">
-                            <div className="text-5xl font-extrabold text-orange-600">10,00+</div>
+                            <div className="text-5xl font-extrabold text-[#1b3a6f]">10,00+</div>
                             <p className="font-semibold mt-2">Miles Run Collectively</p>
                         </div>
                     </div>
@@ -33,7 +33,7 @@ const Impact = () => {
 
                     <div className="mt-8">
                         <NavLink to="/all-marathon">
-                            <button className="bg-orange-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-orange-700">
+                            <button className="bg-[#123065] text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-[#224788]">
                                 Explore Marathons
                             </button>
                         </NavLink>

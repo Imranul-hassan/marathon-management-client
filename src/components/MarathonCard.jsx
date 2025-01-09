@@ -30,14 +30,14 @@ const MarathonCard = ({ marathon }) => {
                     <h2 className="card-title text-xl font-bold text-gray-800">
                         {marathon_title}
                     </h2>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <p className="text-sm text-gray-700 mt-2">
                         <span className="font-bold">Location:</span> {location}
                     </p>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <p className="text-sm text-gray-700 mt-2">
                         <span className="font-bold">Registration Start:</span>{" "}
                         {new Date(start_registration_date).toLocaleDateString()}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-700">
                         <span className="font-bold">Registration End:</span>{" "}
                         {new Date(end_registration_date).toLocaleDateString()}
                     </p>

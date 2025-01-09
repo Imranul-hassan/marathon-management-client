@@ -27,9 +27,6 @@ const MyMarathon = () => {
     function openModal() {
         setIsOpen(true);
     }
-    // function afterOpenModal() {
-
-    // }
 
     function closeModal() {
         setIsOpen(false);

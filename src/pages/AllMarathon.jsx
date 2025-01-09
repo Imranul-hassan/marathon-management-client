@@ -24,11 +24,11 @@ const AllMarathon = () => {
     return (
         <div className="w-10/12 mx-auto mb-4">
              <Helmet><title>Marathons | Marathon Management System</title></Helmet>
-             <h2 className="text-2xl font-bold text-center p-5">All Marathon</h2>
-            <div className=" mt-2 mb-4 font-semibold text-lg">
-                <label>Sort by: </label>
+             <h2 className="text-2xl font-bold text-center p-5">All Marathons</h2>
+            <div className=" mt-2 mb-4 font-semibold text-lg ">
                 <select
                     id="sortOrder"
+                    className="rounded-md p-2"
                     value={sortOrder}
                     onChange={(e) => setSortOrder(e.target.value)}
                 >

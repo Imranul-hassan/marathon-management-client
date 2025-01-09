@@ -36,10 +36,10 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               <Link to='/add-marathon'>Add Marathon</Link>
             </li>
             <li>
-              <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
+              <Link to={`/my-marathon/${user?.email}`}>My Marathon </Link>
             </li>
             <li>
-              <Link to={`/my-apply/${user?.email}`}>My Apply List</Link>
+              <Link to={`/my-apply/${user?.email}`}>My Apply </Link>
             </li>
           </ul>
         </div>
@@ -52,32 +52,18 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               (
                 <div>
                   <NavLink to="/">Home</NavLink>
-                  <NavLink to="/all-marathon"><span className="m-3">Marathons</span></NavLink>
-                  <div className='dropdown dropdown-end z-50'>
-                    <button className="">Dashboard</button>
-
-                    <ul tabIndex={0}
-                      className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#2c598d] rounded-box w-52'
-                    >
-                      <li>
-                        <Link to='/add-marathon' className='justify-between'>
-                          Add Marathon
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={`/my-marathon/${user?.email}`}>My Marathon List</Link>
-                      </li>
-                      <li>
-                        <Link to={`/my-apply/${user?.email}`}>My Apply List</Link>
-                      </li>
-                    </ul>
-                  </div>
+                  <NavLink to="/all-marathon"><span className="ml-3">Marathons</span></NavLink>
+                  <NavLink to='/add-marathon' >
+                  <span className="m-3">Add Marathon</span>
+                  </NavLink>
+                  <NavLink to={`/my-marathon/${user?.email}`}>My Marathon </NavLink>
+                  <NavLink to={`/my-apply/${user?.email}`}><span className="ml-3">My Apply</span></NavLink>
                 </div>
               ) :
-              ( <div>
+              (<div>
                 <NavLink to="/all-marathon">Marathons</NavLink>
                 <NavLink to="/"><span className="m-3">Home</span></NavLink>
-                </div>
+              </div>
               )
           }
         </div>
@@ -92,11 +78,11 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
                   src={user.photoURL}
                   alt="User Avatar"
                 />
-                <div className="absolute top-11 left-1/2 -translate-x-1/2 hidden group-hover:block bg-teal-800 text-white text-base rounded-md px-2 py-1">
+                <div className="absolute top-11 left-1/2 -translate-x-1/2 z-50 hidden group-hover:block bg-[#2c598d] text-white text-base rounded-md px-2 py-1">
                   {user.displayName}
                 </div>
               </div>
-              <button className="font-semibold py-1  px-1 md:px-2 bg-[#FFB800] rounded-md" onClick={logOut}>Logout</button>
+              <button className="font-semibold py-1  px-1 md:px-2 bg-[#112548] rounded-md" onClick={logOut}>Logout</button>
             </div>) :
             (
               <div className="flex gap-2">
@@ -113,13 +99,6 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
               </div>
             )
         }
-
-        <input
-          type="checkbox"
-          checked={isDarkMode}
-          onChange={handleCheckboxChange}
-          className="toggle theme-controller  m-2"
-        />
 
       </div>
     </div>
