@@ -6,6 +6,8 @@ import Modal from 'react-modal';
 import UpdateMyMarathon from "../components/UpdateMyMarathon";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { MdDeleteForever } from "react-icons/md";
+import { MdBrowserUpdated } from "react-icons/md";
 
 const MyMarathon = () => {
     // const myMarathon = useLoaderData();
@@ -78,7 +80,7 @@ const MyMarathon = () => {
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
-                        <tr className="bg-slate-500 text-white">
+                        <tr className="bg-slate-50 text-black">
                             <th className="border border-gray-300 px-3 py-2">Serial</th>
                             <th className="border border-gray-300 px-3 py-2">Photo</th>
                             <th className="border border-gray-300 px-3 py-2">Title</th>
@@ -88,7 +90,7 @@ const MyMarathon = () => {
                             <th className="border border-gray-300 px-3 py-2">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-white text-black">
                         {
                             marathons.map((marathon, index) => (
                                 <tr key={marathon._id}>
@@ -104,16 +106,16 @@ const MyMarathon = () => {
                                     <td className="border border-gray-300 px-3 py-2">{marathon.marathon_start_date}</td>
                                     <td className="border border-gray-300 px-3 py-2 text-center">{marathon.location}</td>
                                     <td className="border border-gray-300 px-3 py-2">{marathon.running_distance}</td>
-                                    <td className="border border-gray-300 px-3 py-2">
+                                    <td className="border border-gray-300 px-3 py-2 text-center">
 
-                                        <Link to={`/my-marathon/${user?.email}/update-marathon/${marathon._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
-                                            Update
+                                        <Link to={`/my-marathon/${user?.email}/update-marathon/${marathon._id}`}> <button onClick={openModal} className="btn btn-sm bg-[#2060a8] text-white mr-2 text-xl hover:bg-[#18406d] rounded-md">
+                                            <MdBrowserUpdated />
                                         </button>
                                         </Link>
 
                                         <button onClick={() => handleDelete(marathon._id)}
-                                            className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
-                                            Delete
+                                            className="btn btn-sm bg-red-500 text-white text-xl hover:bg-red-600 rounded-md">
+                                           <MdDeleteForever />
                                         </button>
                                     </td>
                                 </tr>

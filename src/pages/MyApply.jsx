@@ -2,8 +2,8 @@
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../provider/AuthProvider";
-import Modal from 'react-modal';
-import UpdateMyApply from "../components/UpdateMyApply";
+import { MdDeleteForever } from "react-icons/md";
+import { MdBrowserUpdated } from "react-icons/md";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -12,18 +12,6 @@ const MyApply = () => {
     // const myApply = useLoaderData();
     const { user } = useContext(AuthContext)
     const [applies, setApplies] = useState([])
-    const [search, setSearch] = useState('')
-    const [modalIsOpen, setIsOpen] = useState(false);
-
-    // useEffect(() => {
-    //     const fetchRegistrations = async () => {
-    //         const {data} = await axios.get(`${import.meta.env.VITE_API_URL}/my-apply/${user.email}?search=${search}`,{
-    //             withCredentials: true
-    //         })
-    //         setApplies(data)
-    //     };
-    //     fetchRegistrations();
-    // }, [search, user.email]);
 
     useEffect(()=>{
         axios.get(` https://marathon-management-server-zeta.vercel.app/my-apply/${user.email}`,{
@@ -31,19 +19,6 @@ const MyApply = () => {
         })
         .then(res => setApplies(res.data))
     },[user.email])
-
-    function openModal() {
-        setIsOpen(true);
-    }
-
-    function closeModal() {
-        setIsOpen(false);
-    }
-
-    const customStyles = {
-        content: { padding: '20px', maxWidth: 'auto', margin: 'auto' },
-        overlay: { backgroundColor: 'rgba(0, 0, 0, 0.75)' },
-    };
 
 
     const handleDelete = (_id) => {
@@ -82,18 +57,11 @@ const MyApply = () => {
         <div className="mb-10 w-10/12 mx-auto">
              <Helmet><title>My Apply | Marathon Management System</title></Helmet>
             <h2 className="text-2xl font-bold text-center p-5">My Apply</h2>
-            <input
-                type="text"
-                className="border-2 m-2"
-                name="search"
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Enter text here..."
-            />
 
             <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-300">
                     <thead>
-                        <tr className="bg-slate-500 text-white">
+                        <tr className="bg-slate-50 text-black">
                             <th className="border border-gray-300 px-3 py-2">Serial</th>
                             <th className="border border-gray-300 px-3 py-2">Title</th>
                             <th className="border border-gray-300 px-3 py-2">Start Date</th>
@@ -102,7 +70,7 @@ const MyApply = () => {
                             <th className="border border-gray-300 px-3 py-2">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-white text-black">
                         {
                             applies.map((apply, index) => (
                                 <tr key={apply._id}>
@@ -111,15 +79,15 @@ const MyApply = () => {
                                     <td className="border border-gray-300 px-3 py-2">{apply.marathonStartDate}</td>
                                     <td className="border border-gray-300 px-3 py-2 text-center">{apply.lastName}</td>
                                     <td className="border border-gray-300 px-3 py-2">{apply.contactNumber}</td>
-                                    <td className="border border-gray-300 px-3 py-2">
+                                    <td className="border border-gray-300 px-3 py-2 text-center">
 
-                                        <Link to={`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button onClick={openModal} className="btn btn-sm bg-teal-600 text-white hover:bg-teal-600 rounded-md">
-                                            Update
+                                        <Link to={`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button className="btn btn-sm bg-[#2060a8] text-xl mr-2 text-white hover:bg-teal-600 rounded-md">
+                                        <MdBrowserUpdated />
                                         </button></Link>
 
                                         <button onClick={() => handleDelete(apply._id)}
-                                            className="btn btn-sm bg-red-500 text-white hover:bg-red-600 rounded-md">
-                                            Delete
+                                            className="btn btn-sm bg-red-500 text-white text-xl hover:bg-red-600 rounded-md">
+                                             <MdDeleteForever />
                                         </button>
                                     </td>
                                 </tr>
@@ -129,17 +97,6 @@ const MyApply = () => {
                     </tbody>
                 </table>
             </div>
-            <Modal
-                isOpen={modalIsOpen}
-                // onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <UpdateMyApply ></UpdateMyApply>
-                <button onClick={closeModal}>close</button>
-
-            </Modal>
         </div>
 
     );
