@@ -1,6 +1,6 @@
 # Marathon Management System
 
-Marathon Management System is a platform that helps organize marathon events by connecting event organizers with participants. Users can create marathons, sign up for events, and manage their registrations through a personal dashboard.
+Marathon Management System is a platform that helps organize marathon events by connecting event organizers with participants. Users can create marathons, sign up for events, and manage their registrations.
 
 ## Live Link
 
