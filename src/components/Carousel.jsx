@@ -10,9 +10,9 @@ import 'swiper/css/navigation'
 import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 import Slide from './Slide'
 
-import bgimg1 from '../assets/marathon-1.webp'
+import bgimg1 from '../assets/marathon.jpg'
 import bgimg2 from '../assets/marathon-2.webp'
-import bgimg3 from '../assets/marathon-1.webp'
+import bgimg3 from '../assets/marathon1.jpg'
 
 export default function Carousel() {
     return (

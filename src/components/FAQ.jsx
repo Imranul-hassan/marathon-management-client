@@ -4,7 +4,7 @@ const FAQ = () => {
         <div id="faq" className=" p-5 my-10 ">
             <div className="md:w-7/12 mx-auto mb-7">
                 <h1 className="font-bold text-3xl text-center">Quick Answers for a Seamless Experience</h1>
-                <p className="mt-4 w-9/12 text-center mx-auto">Explore answers to frequently asked questions and make the most of your crowdfunding experience.</p>
+                <p className="mt-4 w-9/12 text-center mx-auto md:text-lg">Explore answers to frequently asked questions and make the most of your crowdfunding experience.</p>
             </div>
             <div className="md:w-8/12 mx-auto ">
                 <div className="collapse collapse-arrow bg-white">

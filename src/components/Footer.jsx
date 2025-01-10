@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/marathon-logo.JPG";
+import logo from "../assets/marathon-logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 
@@ -7,10 +7,10 @@ const Footer = () => {
     const { user } = useContext(AuthContext)
     return (
         <div>
-            <footer className="footer bg-[#2c598d] text-white rounded p-10 flex flex-wrap justify-between items-center">
+            <footer className="footer bg-[#3972b3] text-white rounded p-10 flex flex-wrap justify-between items-center">
                 {/* Left Section */}
                 <aside className="flex items-center space-x-4">
-                    <div className="w-12">
+                    <div className="w-20 text-white">
                         <img src={logo} alt="Marathon Logo" />
                     </div>
                     <p>

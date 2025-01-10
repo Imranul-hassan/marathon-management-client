@@ -12,7 +12,7 @@ const UpcomingMarathon = () => {
                 <div className=" pr-4">
                     <div className="w-9/12 mx-auto text-center ">
                         <h1 className="font-semibold text-2xl md:text-3xl my-3 ">Your Next Challenge Awaits – Upcoming Marathons</h1>
-                        <p>Find upcoming marathons, join exciting races, and challenge yourself to achieve new milestones. Whether you're a seasoned runner or a beginner, there's a race for you!"</p>
+                        <p className="md:text-lg">Find upcoming marathons, join exciting races, and challenge yourself to achieve new milestones. Whether you're a seasoned runner or a beginner, there's a race for you!"</p>
                     </div>
                     <div className=" md:grid grid-cols-4 mt-6 gap-3 animate__animated animate__bounce animate__delay-1s ">
 
