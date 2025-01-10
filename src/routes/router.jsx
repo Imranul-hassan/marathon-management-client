@@ -13,6 +13,7 @@ import MarathonDetails from "../pages/MarathonDetails";
 import UpdateMyMarathon from "../components/UpdateMyMarathon";
 import UpdateMyApply from "../components/UpdateMyApply";
 import MarathonRegistration from "../components/MarathonRegistration";
+import AboutUs from "../pages/AboutUs";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         loader: () => fetch(` https://marathon-management-server-zeta.vercel.app/marathon`)
+      },
+      {
+        path: '/about-us',
+        element: <AboutUs></AboutUs>
       },
       {
         path: '/login',

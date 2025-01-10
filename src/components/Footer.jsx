@@ -6,8 +6,8 @@ import { AuthContext } from "../provider/AuthProvider";
 const Footer = () => {
     const { user } = useContext(AuthContext)
     return (
-        <div>
-            <footer className="footer bg-[#3972b3] text-white rounded p-10 flex flex-wrap justify-between items-center">
+        <div className="bg-[#3972b3] text-white">
+            <footer className="footer w-11/12 mx-auto rounded p-10 flex flex-wrap justify-between items-center">
                 {/* Left Section */}
                 <aside className="flex items-center space-x-4">
                     <div className="w-20 text-white">
@@ -21,10 +21,11 @@ const Footer = () => {
                 </aside>
 
                 <nav className="grid grid-flow-col gap-4">
-                    <Link to="/" className="link link-hover">About us</Link>
+                    <Link to="/" className="link link-hover">Home</Link>
                     <Link to="/all-marathon" className="link link-hover">Marathons</Link>
-                    <a className="link link-hover">Contact</a>
-                    <Link to={`/my-apply/${user?.email}`}>My Apply </Link>
+                    <Link to="/about-us" className="link link-hover">About Us</Link>
+                   
+                    
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
@@ -64,7 +65,7 @@ const Footer = () => {
                     </div>
                 </nav>
 
-                <aside className="w-5/12 mt-4 text-center mx-auto ">
+                <aside className="w-6/12 text-center mx-auto ">
                     <p>
                         Copyright © {new Date().getFullYear()} - All rights reserved by Marathon Management System
                     </p>
