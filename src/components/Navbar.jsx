@@ -1,4 +1,4 @@
-
+import logo from "../assets/mara-logo.png"
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
@@ -43,7 +43,10 @@ const Navbar = ({ isDarkMode, toggleTheme, handleCheckboxChange }) => {
             </li>
           </ul>
         </div>
+       <div className="flex">
+        <img className="w-8 h-6 mt-3" src={logo} alt="" />
         <NavLink to="/" className="btn btn-ghost text-xl pl-0">MARATHON</NavLink>
+       </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="menu menu-horizontal px-1 space-x-6 font-semibold text-base">

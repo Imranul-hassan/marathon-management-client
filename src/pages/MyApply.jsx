@@ -81,7 +81,7 @@ const MyApply = () => {
                                     <td className="border border-gray-300 px-3 py-2">{apply.contactNumber}</td>
                                     <td className="border border-gray-300 px-3 py-2 text-center">
 
-                                        <Link to={`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button className="btn btn-sm bg-[#2060a8] text-xl mr-2 text-white hover:bg-teal-600 rounded-md">
+                                        <Link to={`/my-apply/${user?.email}/update-apply/${apply._id}`}> <button className="btn btn-sm bg-[#2060a8] text-xl mr-2 text-white hover:bg-[#1d497b] rounded-md">
                                         <MdBrowserUpdated />
                                         </button></Link>
 

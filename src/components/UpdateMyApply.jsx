@@ -3,8 +3,10 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from 'react-router-dom';
 
 const UpdateMyApply = () => {
+    const navigate = useNavigate();
     const updateApply = useLoaderData()
     const {
         _id,
@@ -49,14 +51,16 @@ const UpdateMyApply = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.modifiedCount > 0) {
-                    Swal.fire({
-                        title: 'sucess!',
-                        text: 'Updated My Apply successfully',
-                        icon: 'success',
-                        confirmButtonText: 'Cool'
-                    })
-                }
+                if (data.modifiedCount > 0) {  
+                    Swal.fire({  
+                        title: 'Success!',  
+                        text: 'Updated My Apply successfully',  
+                        icon: 'success',  
+                        confirmButtonText: 'Cool',  
+                    }).then(() => {  
+                        navigate(`/my-apply/${user?.email}`);   
+                    });  
+                }  
             })
 
     };
@@ -145,7 +149,7 @@ const UpdateMyApply = () => {
                 <div className="mt-4">
                     <button
                         type="submit"
-                        className="btn bg-[#2c598d] hover:bg-[#1a3553] text-white w-full"
+                        className="btn bg-[#2c598d] hover:bg-[#1c487a] text-white w-full"
                     >
                         Update My Apply
                     </button>

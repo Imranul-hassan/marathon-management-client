@@ -2,10 +2,11 @@ import { useContext } from 'react';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 const AddMarathon = () => {
     const { user } = useContext(AuthContext);
-
+    const navigate = useNavigate();
     const handleAddMarathon = event => {
         event.preventDefault();
         const form = event.target;
@@ -57,7 +58,9 @@ const AddMarathon = () => {
                         text: 'Added successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                    })
+                    }).then(() => {  
+                        navigate(`/all-marathon`);   
+                    });  
                 }
             })
 

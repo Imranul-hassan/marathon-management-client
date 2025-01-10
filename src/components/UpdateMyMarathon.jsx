@@ -4,9 +4,10 @@ import Swal from 'sweetalert2'
 import { AuthContext } from '../provider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateMyMarathon = () => {
-
+    const navigate = useNavigate();
     const updatemarathon = useLoaderData()
     const {
         _id,
@@ -68,7 +69,9 @@ const UpdateMyMarathon = () => {
                         text: 'Marathon updated successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                    })
+                    }).then(() => {  
+                        navigate(`/my-marathon/${user?.email}`);   
+                    });  
                 }
             })
 
